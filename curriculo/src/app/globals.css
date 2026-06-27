@@ -3,16 +3,35 @@
 :root {
   --background: #080a0f;
   --foreground: #f4f4f5;
+
+  --font-family-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-family-mono: var(--font-geist-mono), "SFMono-Regular", Consolas, monospace;
+
   --app-bg: #080a0f;
   --app-surface: #0d1018;
+  --app-surface-elevated: #111520;
   --app-border: rgb(255 255 255 / 0.1);
   --app-text: #f4f4f5;
   --app-muted: #a1a1aa;
+  --app-accent: #3b82f6;
+  --app-accent-hover: #60a5fa;
+  --app-accent-soft: rgb(59 130 246 / 0.1);
+  --app-accent-border: rgb(96 165 250 / 0.28);
+  --app-accent-text: #93c5fd;
   --header-bg: rgb(8 10 15 / 0.85);
   --subtle-bg: rgb(255 255 255 / 0.03);
   --subtle-bg-hover: rgb(255 255 255 / 0.06);
   --tag-bg: rgb(255 255 255 / 0.06);
   --tag-text: #e4e4e7;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+
+  --space-section-y: 5rem;
+  --space-section-y-lg: 6rem;
+  --space-card: 1.5rem;
 }
 
 :root[data-theme="light"] {
@@ -20,9 +39,15 @@
   --foreground: #111827;
   --app-bg: #f8fafc;
   --app-surface: #ffffff;
+  --app-surface-elevated: #ffffff;
   --app-border: rgb(15 23 42 / 0.12);
   --app-text: #111827;
   --app-muted: #5b6472;
+  --app-accent: #2563eb;
+  --app-accent-hover: #1d4ed8;
+  --app-accent-soft: rgb(37 99 235 / 0.09);
+  --app-accent-border: rgb(37 99 235 / 0.2);
+  --app-accent-text: #1d4ed8;
   --header-bg: rgb(248 250 252 / 0.85);
   --subtle-bg: rgb(15 23 42 / 0.04);
   --subtle-bg-hover: rgb(15 23 42 / 0.08);
@@ -40,13 +65,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-sans);
   transition:
     background-color 200ms ease,
     color 200ms ease;
 }
 
 ::selection {
-  background: #3b82f6;
+  background: var(--app-accent);
   color: white;
 }
