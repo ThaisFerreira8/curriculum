@@ -56,10 +56,18 @@ export function MainLayout({ children }: MainLayoutProps) {
           <div className="flex items-center gap-3">
             <a
               href="#projects"
-              className="rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-400"
+              className="hidden rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-400 sm:inline-flex"
             >
               Ver trabalho
             </a>
+            <button
+              type="button"
+              aria-label="Abrir menu mobile"
+              disabled
+              className="rounded-lg border border-[color:var(--app-border)] bg-[var(--subtle-bg)] px-3 py-2 text-sm font-semibold text-[var(--app-muted)] md:hidden"
+            >
+              Menu
+            </button>
             <button
               type="button"
               aria-label={isLight ? "Ativar tema escuro" : "Ativar tema claro"}
