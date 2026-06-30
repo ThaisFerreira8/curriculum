@@ -3,12 +3,14 @@ import { MainLayout } from "@/components/MainLayout";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Hero } from "@/sections/Hero";
+import { Stats } from "@/sections/Stats";
 
 export default function Home() {
   return (
     <MainLayout>
       <Container>
         <Hero />
+        <Stats />
 
         <section className="flex flex-col gap-8 pb-12 md:flex-row md:items-end md:justify-between">
           <SectionTitle
