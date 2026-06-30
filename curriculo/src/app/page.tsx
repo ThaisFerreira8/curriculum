@@ -1,15 +1,16 @@
-import { ButtonLink } from "@/components/Button";
 import { Container } from "@/components/Container";
-import { GithubIcon } from "@/components/icons";
 import { MainLayout } from "@/components/MainLayout";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { SectionTitle } from "@/components/SectionTitle";
+import { Hero } from "@/sections/Hero";
 
 export default function Home() {
   return (
     <MainLayout>
-      <Container className="py-[var(--space-section-y)] sm:py-[var(--space-section-y-lg)]">
-        <section className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+      <Container>
+        <Hero />
+
+        <section className="flex flex-col gap-8 pb-12 md:flex-row md:items-end md:justify-between">
           <SectionTitle
             description={
               <>
@@ -24,16 +25,6 @@ export default function Home() {
           <span id="experience" className="sr-only">
             Experiencia
           </span>
-
-          <ButtonLink
-            href="https://github.com/alexrivera"
-            target="_blank"
-            rel="noreferrer"
-            variant="secondary"
-          >
-            <GithubIcon />
-            Ver no GitHub
-          </ButtonLink>
         </section>
 
         <ProjectsSection />
