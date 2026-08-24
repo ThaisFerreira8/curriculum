@@ -7,11 +7,12 @@ import { ButtonLink } from "./Button";
 import { Container } from "./Container";
 import { MenuIcon, TerminalIcon, XIcon } from "./icons";
 import { ThemeToggle } from "./ThemeToggle";
+import { profile } from "@/data/profile";
 
 const navigationItems = [
-  { href: "/", label: "Inicio", match: "/" },
-  { href: "/experience", label: "Experiencia", match: "/experience" },
-  { href: "/#projects", label: "Projetos", match: "/projects" },
+  { href: "/", label: "Início", match: "/" },
+  { href: "/experience", label: "Experiência", match: "/experience" },
+  { href: "/projects", label: "Projetos", match: "/projects" },
 ];
 
 export function Brand() {
@@ -20,16 +21,12 @@ export function Brand() {
       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[var(--radius-md)] bg-[var(--app-accent)] text-white shadow-lg shadow-blue-500/25">
         <TerminalIcon />
       </span>
-      <span className="truncate">Thais Ferreira Gomes</span>
+      <span className="truncate">{profile.name}</span>
     </Link>
   );
 }
 
 function isActivePath(pathname: string, match: string) {
-  if (match === "/projects") {
-    return false;
-  }
-
   return pathname === match;
 }
 
@@ -63,7 +60,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <ButtonLink className="hidden sm:inline-flex" href="/#projects" size="sm">
+          <ButtonLink className="hidden sm:inline-flex" href="/projects" size="sm">
             Ver trabalho
           </ButtonLink>
           <button
