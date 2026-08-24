@@ -12,24 +12,24 @@ export function Hero() {
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center">
         <Badge className="mb-6" variant="accent">
-          Disponivel para novas oportunidades
+          Disponível para oportunidades em Desenvolvimento de Software
         </Badge>
 
         <h1 className="max-w-4xl text-5xl font-bold tracking-normal text-[var(--app-text)] sm:text-6xl lg:text-7xl">
-          Engenheiro de Software construindo produtos{" "}
-          <span className="text-[var(--app-accent-text)]">rapidos, seguros e elegantes</span>
+          Engenheira de Software construindo produtos{" "}
+          <span className="text-[var(--app-accent-text)]">rápidos, seguros e elegantes</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-8 text-[var(--app-muted)] sm:text-lg">
-          Sou Alex Rivera. Trabalho do frontend ao backend, com forte atencao a
-          arquitetura, seguranca e automacao para transformar problemas complexos
-          em solucoes simples e confiaveis.
+          Sou Thais Ferreira Gomes. Trabalho do frontend ao backend, desenvolvendo
+          aplicações web, APIs REST e soluções serverless com atenção à qualidade,
+          segurança e manutenção do código.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
           <ButtonLink href="/#projects">Ver projetos</ButtonLink>
           <ButtonLink
-            href="https://github.com/alexrivera"
+            href="https://github.com/ThaisFerreira8"
             target="_blank"
             rel="noreferrer"
             variant="secondary"
@@ -40,7 +40,7 @@ export function Hero() {
         </div>
 
         <p className="mt-6 text-sm text-[var(--app-muted)]">
-          Sao Paulo, Brasil · Remoto global
+          São Paulo, SP · Disponível para trabalho híbrido ou remoto
         </p>
       </div>
     </section>
