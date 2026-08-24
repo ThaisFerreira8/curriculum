@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { profile } from "@/data/profile";
 import "./globals.css";
+
+const themeInitializationScript = `
+  (() => {
+    try {
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const systemTheme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      const theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : systemTheme;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+      document.documentElement.style.colorScheme = "dark";
+    }
+  })();
+`;
 
 export const metadata: Metadata = {
   title: `${profile.name} | ${profile.role}`,
@@ -14,8 +30,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="h-full antialiased">
-      <body className="min-h-full bg-[#080a0f] text-zinc-100">{children}</body>
+    <html lang="pt-BR" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitializationScript }} />
+      </head>
+      <body className="min-h-full bg-[var(--app-bg)] text-[var(--app-text)]">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
