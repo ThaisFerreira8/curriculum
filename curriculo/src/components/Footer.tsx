@@ -1,25 +1,26 @@
 import { Container } from "./Container";
 import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from "./icons";
 import { Brand } from "./Navbar";
+import { profile } from "@/data/profile";
 
 const socialLinks = [
   {
-    href: "https://github.com/ThaisFerreira8",
+    href: profile.githubUrl,
     label: "GitHub",
     icon: <GithubIcon />,
   },
   {
-    href: "https://www.linkedin.com/in/thais-ferreira-0ba1b71a8/",
+    href: profile.linkedinUrl,
     label: "LinkedIn",
     icon: <LinkedinIcon />,
   },
   {
-    href: "mailto:thaisferreiragomes8@gmail.com",
+    href: `mailto:${profile.email}`,
     label: "Email",
     icon: <MailIcon />,
   },
   {
-    href: "tel:+5511988871281",
+    href: profile.phoneHref,
     label: "Telefone",
     icon: <PhoneIcon />,
   },
@@ -31,9 +32,9 @@ export function Footer() {
       <Container className="flex flex-col gap-6 text-sm text-[var(--app-muted)] md:flex-row md:items-center md:justify-between">
         <Brand />
         <div className="text-center md:text-left">
-          <p>&copy; 2026 Thais Ferreira Gomes.</p>
-          <a className="mt-1 inline-block hover:text-[var(--app-text)]" href="tel:+5511988871281">
-            (11) 98887-1281
+          <p>&copy; 2026 {profile.name}.</p>
+          <a className="mt-1 inline-block hover:text-[var(--app-text)]" href={profile.phoneHref}>
+            {profile.phoneDisplay}
           </a>
         </div>
         <div className="flex gap-3">

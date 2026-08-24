@@ -2,33 +2,33 @@ import { Card } from "@/components/Card";
 
 const stats = [
   {
-    value: "8+",
-    label: "Anos de experiencia",
+    value: "2",
+    label: "Áreas de experiência",
   },
   {
-    value: "40+",
-    label: "Projetos entregues",
+    value: "10",
+    label: "Projetos de mitigação gerenciados",
   },
   {
-    value: "12",
-    label: "Times liderados",
+    value: "3",
+    label: "Formações acadêmicas",
   },
   {
-    value: "99.9%",
-    label: "Uptime em producao",
+    value: "Intermediário",
+    label: "Inglês",
   },
 ];
 
 export function Stats() {
   return (
-    <section aria-label="Metricas profissionais" className="pb-[var(--space-section-y)]">
+    <section aria-label="Destaques profissionais" className="pb-[var(--space-section-y)]">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <Card
             key={stat.label}
             className="flex min-h-32 flex-col items-center justify-center text-center"
           >
-            <strong className="text-4xl font-bold text-[var(--app-accent-text)]">
+            <strong className="text-3xl font-bold text-[var(--app-accent-text)] sm:text-4xl">
               {stat.value}
             </strong>
             <span className="mt-4 text-sm text-[var(--app-muted)]">{stat.label}</span>

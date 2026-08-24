@@ -1,10 +1,10 @@
 import { Container } from "@/components/Container";
 import { MainLayout } from "@/components/MainLayout";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { SectionTitle } from "@/components/SectionTitle";
+import { Contact } from "@/sections/Contact";
 import { Expertise } from "@/sections/Expertise";
 import { Hero } from "@/sections/Hero";
 import { Stats } from "@/sections/Stats";
+import { TechStack } from "@/sections/TechStack";
 
 export default function Home() {
   return (
@@ -13,25 +13,8 @@ export default function Home() {
         <Hero />
         <Stats />
         <Expertise />
-
-        <section className="flex flex-col gap-8 pb-12 md:flex-row md:items-end md:justify-between">
-          <SectionTitle
-            description={
-              <>
-                Uma selecao de projetos open source e profissionais. Filtre por area
-                para explorar trabalhos especificos.
-              </>
-            }
-            eyebrow="Projetos"
-            title="Coisas que construi"
-            titleAs="h1"
-          />
-          <span id="experience" className="sr-only">
-            Experiencia
-          </span>
-        </section>
-
-        <ProjectsSection />
+        <TechStack />
+        <Contact />
       </Container>
     </MainLayout>
   );

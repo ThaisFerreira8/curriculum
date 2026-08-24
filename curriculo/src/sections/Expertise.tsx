@@ -19,43 +19,43 @@ const expertiseItems: ExpertiseItem[] = [
   {
     title: "Desenvolvimento Frontend",
     description:
-      "Interfaces acessiveis e performaticas com React, Next.js e TypeScript, com foco em detalhes e experiencia do usuario.",
+      "Interfaces web responsivas com React, TypeScript, HTML, CSS e Tailwind CSS, organizadas em componentes reutilizáveis.",
     icon: <CodeIcon />,
   },
   {
     title: "Desenvolvimento Backend",
     description:
-      "APIs robustas e escalaveis com Node.js, Go e PostgreSQL, priorizando confiabilidade e observabilidade.",
+      "APIs REST com Python, Flask, SQLAlchemy e PostgreSQL, utilizando arquitetura em camadas, validação de dados e JWT.",
     icon: <ServerIcon />,
   },
   {
-    title: "Arquitetura de Software",
+    title: "Cloud e Integração",
     description:
-      "Sistemas distribuidos, microsservicos e design orientado a dominio para produtos que escalam com o time.",
+      "Funções serverless com Python e AWS Lambda, integradas a serviços de backend e fluxos de processamento de dados.",
     icon: <NetworkIcon />,
   },
   {
-    title: "Seguranca da Informacao",
+    title: "Segurança da Informação",
     description:
-      "Modelagem de ameacas, autenticacao segura e praticas de hardening aplicadas em todo o ciclo de desenvolvimento.",
+      "Análise de riscos, revisão de controles e políticas com base em NIST, CIS Controls e ISO 27001.",
     icon: <ShieldIcon />,
   },
   {
-    title: "Automacao",
+    title: "Qualidade de Software",
     description:
-      "Pipelines de CI/CD, infraestrutura como codigo e automacoes que reduzem trabalho manual e erros.",
+      "Versionamento com Git, testes automatizados com Pytest, lint e práticas que favorecem código confiável e sustentável.",
     icon: <WorkflowIcon />,
   },
 ];
 
 export function Expertise() {
   return (
-    <section className="pb-[var(--space-section-y)]" aria-label="Expertise de ponta a ponta">
+    <section className="pb-[var(--space-section-y)]" aria-label="Áreas de atuação">
       <SectionTitle
         className="mb-10"
-        description="Do pixel ao pipeline. Atuo em todas as camadas do ciclo de vida do software para entregar produtos completos e sustentaveis."
-        eyebrow="Areas de atuacao"
-        title="Expertise de ponta a ponta"
+        description="Experiência prática em desenvolvimento full stack, integrações cloud, qualidade de software e segurança da informação."
+        eyebrow="Áreas de atuação"
+        title="Conhecimentos que conectam desenvolvimento e segurança"
       />
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
