@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Rivera | Projetos",
-  description: "Portfolio de projetos desenvolvido com Next.js e Tailwind CSS.",
+  title: "Thais Ferreira Gomes | Engenheira de Software",
+  description:
+    "Portfólio profissional de Thais Ferreira Gomes, engenheira de software com experiência em desenvolvimento web e segurança da informação.",
 };
 
 export default function RootLayout({

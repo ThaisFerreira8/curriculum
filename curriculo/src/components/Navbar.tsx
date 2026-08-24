@@ -20,7 +20,7 @@ export function Brand() {
       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[var(--radius-md)] bg-[var(--app-accent)] text-white shadow-lg shadow-blue-500/25">
         <TerminalIcon />
       </span>
-      <span className="truncate">Alex Rivera</span>
+      <span className="truncate">Thais Ferreira Gomes</span>
     </Link>
   );
 }
